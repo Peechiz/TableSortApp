@@ -25,7 +25,6 @@ class Index extends Component {
     let json = [...this.state.json]
     json.sort(this.compareBy(key))
     this.setState({json})
-    console.log('clicked',key)
   }
 
 
