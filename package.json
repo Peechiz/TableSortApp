@@ -1,5 +1,5 @@
 {
-  "name": "RackSpace",
+  "name": "RackSpaceCodingChallenge",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,7 +9,7 @@
     "start": "next start"
   },
   "keywords": [],
-  "author": "",
+  "author": "Chris Impicciche",
   "license": "ISC",
   "dependencies": {
     "isomorphic-unfetch": "^2.0.0",
