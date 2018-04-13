@@ -1,19 +1,17 @@
 {
-  "name": "RackSpaceCodingChallenge",
+  "name": "rackspace_coding_challenge",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start"
+    "dev": "next"
   },
   "keywords": [],
   "author": "Chris Impicciche",
   "license": "ISC",
   "dependencies": {
     "isomorphic-unfetch": "^2.0.0",
-    "next": "^5.1.0",
+    "next": "latest",
     "react": "^16.3.1",
     "react-dom": "^16.3.1"
   }
