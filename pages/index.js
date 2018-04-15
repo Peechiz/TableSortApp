@@ -1,4 +1,5 @@
 import Header from '../components/Header'
+import Layout from '../layout/Layout.js'
 import { Component } from 'react'
 import fetch from 'isomorphic-unfetch'
 
@@ -29,13 +30,11 @@ class Index extends Component {
 
 
   render() {
-
-    let json = this.state.json
     return (
-      <div>
-        <Header />
-        <table>
-          <thead>
+      <Layout>
+        <h1>Amazing arbitrary data</h1>
+        <table className="table table-striped">
+          <thead className="thead-dark">
             <tr>
               <th onClick={() => this.sortBy('userId')}>User</th>
               <th onClick={() => this.sortBy('id')}>ID</th>
@@ -44,7 +43,7 @@ class Index extends Component {
             </tr>
           </thead>
           <tbody>
-            {json.map(post => (
+            {this.state.json.map(post => (
               <tr key={post.id}>
                 <td>{post.userId}</td>
                 <td>{post.id}</td>
@@ -54,12 +53,22 @@ class Index extends Component {
             ))}
           </tbody>
         </table>
-      </div>
+        <style jsx global>{`
+          body {
+            background: linear-gradient(to right, #f0544f, #f3845d, #f4ad7a, #f7d0a3, #fdf0d5);
+          }
+          h1 {
+            margin-top: 1em;
+          }
+          th {
+            cursor: pointer;
+          }
+        `}  
+        </style>
+      </Layout>
     )
   }
 }
-
-
 
 Index.getInitialProps = async function () {
   const res = await fetch('http://jsonplaceholder.typicode.com/posts')
